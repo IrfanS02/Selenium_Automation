@@ -1,0 +1,26 @@
+package WebDriverMethods;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FirstName {
+
+    public static void main(String[] args) throws InterruptedException {
+
+        WebDriver driver = new ChromeDriver();
+        
+
+        driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
+        Thread.sleep(2000);
+        
+       WebElement fname =  driver.findElement(By.name("fname"));
+       fname.clear();
+       fname.sendKeys("Irfan");
+        Thread.sleep(2000);
+        driver.quit();
+//        driver.quit();
+        
+    }
+}
